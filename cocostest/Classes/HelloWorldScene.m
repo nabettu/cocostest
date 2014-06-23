@@ -40,18 +40,22 @@
     self.userInteractionEnabled = YES;
     
     // Create a colored background (Dark Grey)
-    CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.0f]];
+    CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:0.2f green:0.2f blue:1.0f alpha:1.0f]];
     [self addChild:background];
     
     // Add a sprite
-    _sprite = [CCSprite spriteWithImageNamed:@"Icon-72.png"];
-    _sprite.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
+    _sprite = [CCSprite spriteWithImageNamed:@"fusen.png"];
+    _sprite.position  = ccp((int)(_sprite.contentSize.width/2),self.contentSize.height/2);
     [self addChild:_sprite];
     
     // Animate sprite with action
-    CCActionRotateBy* actionSpin = [CCActionRotateBy actionWithDuration:1.5f angle:360];
+/*    CCActionRotateBy* actionSpin = [CCActionRotateBy actionWithDuration:1.5f angle:360];
     [_sprite runAction:[CCActionRepeatForever actionWithAction:actionSpin]];
+*/
     
+    CCActionMoveTo* actionGravity = [CCActionMoveTo actionWithDuration:3.0f position:ccp(_sprite.position.x,(_sprite.contentSize.height)*-1)];
+    [_sprite runAction:[CCActionRepeatForever actionWithAction:actionGravity]];
+
     // Create a back button
     CCButton *backButton = [CCButton buttonWithTitle:@"[ Menu ]" fontName:@"Verdana-Bold" fontSize:18.0f];
     backButton.positionType = CCPositionTypeNormalized;
@@ -104,7 +108,7 @@
     CCLOG(@"Move sprite to @ %@",NSStringFromCGPoint(touchLoc));
     
     // Move our sprite to touch location
-    CCActionMoveTo *actionMove = [CCActionMoveTo actionWithDuration:1.0f position:touchLoc];
+    CCActionMoveTo *actionMove = [CCActionMoveTo actionWithDuration:1.0f position:ccp(_sprite.position.x,(_sprite.position.y+100))];
     [_sprite runAction:actionMove];
 }
 
@@ -115,8 +119,7 @@
 - (void)onBackClicked:(id)sender
 {
     // back to intro scene with transition
-    [[CCDirector sharedDirector] replaceScene:[IntroScene scene]
-                               withTransition:[CCTransition transitionPushWithDirection:CCTransitionDirectionRight duration:1.0f]];
+    [[CCDirector sharedDirector] replaceScene:[IntroScene scene]];
 }
 
 // -----------------------------------------------------------------------

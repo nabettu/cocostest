@@ -202,6 +202,7 @@
 		D54372C519579CEA00F12E36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D54372C419579CEA00F12E36 /* AppDelegate.m */; };
 		D54372C819579CEA00F12E36 /* HelloWorldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D54372C719579CEA00F12E36 /* HelloWorldScene.m */; };
 		D54372CB19579CEA00F12E36 /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D54372CA19579CEA00F12E36 /* IntroScene.m */; };
+		D54372D519579F2C00F12E36 /* fusen.png in Resources */ = {isa = PBXBuildFile; fileRef = D54372D419579F2C00F12E36 /* fusen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -613,6 +614,7 @@
 		D54372C719579CEA00F12E36 /* HelloWorldScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HelloWorldScene.m; path = Classes/HelloWorldScene.m; sourceTree = "<group>"; };
 		D54372C919579CEA00F12E36 /* IntroScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IntroScene.h; path = Classes/IntroScene.h; sourceTree = "<group>"; };
 		D54372CA19579CEA00F12E36 /* IntroScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IntroScene.m; path = Classes/IntroScene.m; sourceTree = "<group>"; };
+		D54372D419579F2C00F12E36 /* fusen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fusen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1423,6 +1425,7 @@
 		D54372C219579CEA00F12E36 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D54372D419579F2C00F12E36 /* fusen.png */,
 				D54372C319579CEA00F12E36 /* AppDelegate.h */,
 				D54372C419579CEA00F12E36 /* AppDelegate.m */,
 				D54372C619579CEA00F12E36 /* HelloWorldScene.h */,
@@ -1521,6 +1524,7 @@
 				D543708519579CE700F12E36 /* Icon-Spotlight-iOS7.png in Resources */,
 				D543707919579CE700F12E36 /* Icon-76@2x.png in Resources */,
 				D543708719579CE700F12E36 /* Icon-Spotlight-iOS7@2x.png in Resources */,
+				D54372D519579F2C00F12E36 /* fusen.png in Resources */,
 				D543707719579CE700F12E36 /* Icon-76.png in Resources */,
 				D543708C19579CE700F12E36 /* iTunesArtwork@2x in Resources */,
 			);
